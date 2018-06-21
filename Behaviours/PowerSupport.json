@@ -1,0 +1,222 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 148,
+			"width": 227
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "unitsInfo"
+	}, {
+		"command": "Variable",
+		"name": "missioninfo"
+	} ],
+	"outputs": [],
+	"properties": {
+		"0WV7WCClNB1UBBhUCkaMYOQXXGudXs5o": {
+			"height": 94,
+			"title": "store",
+			"width": 494,
+			"x": 1356,
+			"y": 247
+		},
+		"HWiFu3mrEYRSMILklRKSkkaZqj6TX9Vy": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1154,
+			"y": 187
+		},
+		"NtYQ06HRaweuJFijnX1x55TlN99U182w": {
+			"height": 88,
+			"title": "luaCondition",
+			"width": 202,
+			"x": 363,
+			"y": 29
+		},
+		"T7HFEr4QVxA0Xu7EU0oEMSelyuFplRB5": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 958,
+			"y": 188
+		},
+		"Te8BpAOInrfOuFc1LK9BTPQkJ2JuX77z": {
+			"height": 94,
+			"title": "store",
+			"width": 286,
+			"x": 1359,
+			"y": 129
+		},
+		"VFdeXOyGXufnSZreauv3wxGYfhsbsRBg": {
+			"height": 92,
+			"title": "Exam.AlongPathMoreUnits",
+			"width": 231,
+			"x": 1356,
+			"y": 444
+		},
+		"WZy0K7RRyCH4m9mAemd0UNy0c8EkBh1b": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 712,
+			"y": -67
+		},
+		"dCEAV6HOt64KUQnedlb7THUDcxY5ZDzG": {
+			"height": 92,
+			"title": "store",
+			"width": 267,
+			"x": 1359,
+			"y": 347
+		},
+		"geDFZT0slBxrxxfP848jWmo7JqB9ec79": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 764,
+			"y": 37
+		},
+		"iZoF6wTU36OyVWide3YsuKc65PO92LvG": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 946,
+			"y": 35
+		},
+		"sAKeEHeldtSsTIHyoCq146YFv4haGUuE": {
+			"height": 94,
+			"title": "store",
+			"width": 365,
+			"x": 940,
+			"y": -79
+		}
+	},
+	"roles": [ {
+		"categories": [ "nota_jd_convoy.AA" ],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "WZy0K7RRyCH4m9mAemd0UNy0c8EkBh1b",
+			"nodeType": "success",
+			"parameters": []
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "sAKeEHeldtSsTIHyoCq146YFv4haGUuE",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "path"
+				}, {
+					"name": "value",
+					"value": "Exam.GetPath(unitsInfo.pathId, missioninfo)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "iZoF6wTU36OyVWide3YsuKc65PO92LvG",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "lastIndex"
+				}, {
+					"name": "value",
+					"value": "1"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "Te8BpAOInrfOuFc1LK9BTPQkJ2JuX77z",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "coridorsInfo"
+						}, {
+							"name": "value",
+							"value": "Exam.CoridorsInfo(missionInfo)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "0WV7WCClNB1UBBhUCkaMYOQXXGudXs5o",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "subPath"
+						}, {
+							"name": "value",
+							"value": "Exam.GetSubpath(lastIndex, coridorsInfo[unitsInfo.pathId], path)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "dCEAV6HOt64KUQnedlb7THUDcxY5ZDzG",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "lastIndex"
+						}, {
+							"name": "value",
+							"value": "coridorsInfo[unitsInfo.pathId]"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "VFdeXOyGXufnSZreauv3wxGYfhsbsRBg",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "path",
+							"value": "subPath"
+						}, {
+							"name": "unitIds",
+							"value": "unitsInfo.ids"
+						}, {
+							"name": "scriptName",
+							"value": "Exam.AlongPathMoreUnits"
+						} ],
+						"scriptName": "Exam.AlongPathMoreUnits"
+					} ],
+					"id": "HWiFu3mrEYRSMILklRKSkkaZqj6TX9Vy",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
+				"id": "T7HFEr4QVxA0Xu7EU0oEMSelyuFplRB5",
+				"nodeType": "repeat",
+				"parameters": []
+			} ],
+			"id": "geDFZT0slBxrxxfP848jWmo7JqB9ec79",
+			"nodeType": "sequence",
+			"parameters": []
+		} ],
+		"id": "NtYQ06HRaweuJFijnX1x55TlN99U182w",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "unitsInfo == nil"
+		}, {
+			"name": "repeat",
+			"value": "true"
+		} ]
+	}
+}

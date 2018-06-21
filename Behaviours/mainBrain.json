@@ -1,0 +1,170 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"3Oj3ZETL8o4xDqto4sl77VktRSTAU85g": {
+			"height": 130,
+			"title": "reference",
+			"width": 208,
+			"x": 823,
+			"y": -174
+		},
+		"4AWSbY51Elm9lgO93wrK4cfktjk22O8V": {
+			"height": 130,
+			"title": "reference",
+			"width": 247,
+			"x": 841,
+			"y": 316
+		},
+		"CuEoAU2EAFB5BhXa2GfVQytHhvYmBNyB": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 589,
+			"y": -149
+		},
+		"JsLzP9gXjLZLKoOBg4O0erxxUexEaXDC": {
+			"height": 70,
+			"title": "roleSplit",
+			"width": 207,
+			"x": 238,
+			"y": 0
+		},
+		"OeeO30FOtm05rdNvfpbgQPsVTeZarsvA": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 591,
+			"y": 178
+		},
+		"hYT2Pk1xeMRg4ZozIeA7hh0QpssmBEGY": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 596,
+			"y": 339
+		},
+		"kFIxqljlyfcLAEcMKVKPSH5sZlik2Nyu": {
+			"height": 130,
+			"title": "reference",
+			"width": 247,
+			"x": 833,
+			"y": 141
+		},
+		"qqu86Noll2Bx2FwM3TrZaxU3szak9TVS": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 585,
+			"y": 9
+		},
+		"xywLMtLsaAg4TXN1SNXd0cM9mvcLxkyT": {
+			"height": 130,
+			"title": "reference",
+			"width": 268,
+			"x": 835,
+			"y": -20
+		}
+	},
+	"roles": [ {
+		"categories": [ "Exam.Farks" ],
+		"name": "Farks"
+	}, {
+		"categories": [ "Exam.AtlasBoxes" ],
+		"name": "FlyBoxes"
+	}, {
+		"categories": [ "Exam.MavZeus" ],
+		"name": "Power"
+	}, {
+		"categories": [],
+		"name": "Hidden"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "3Oj3ZETL8o4xDqto4sl77VktRSTAU85g",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "Exam.Farks"
+				} ],
+				"referenceInputs": [ {
+					"name": "missioninfo",
+					"value": "missionInfo"
+				} ],
+				"referenceOutputs": []
+			} ],
+			"id": "CuEoAU2EAFB5BhXa2GfVQytHhvYmBNyB",
+			"nodeType": "repeat",
+			"parameters": []
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "xywLMtLsaAg4TXN1SNXd0cM9mvcLxkyT",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "Exam.FlyPathSupporterGroup"
+				} ],
+				"referenceInputs": [ {
+					"name": "missioninfo",
+					"value": "missionInfo"
+				} ],
+				"referenceOutputs": []
+			} ],
+			"id": "qqu86Noll2Bx2FwM3TrZaxU3szak9TVS",
+			"nodeType": "repeat",
+			"parameters": []
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "kFIxqljlyfcLAEcMKVKPSH5sZlik2Nyu",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "Exam.PowerSupportGroup"
+				} ],
+				"referenceInputs": [ {
+					"name": "missioninfo",
+					"value": "missionInfo"
+				} ],
+				"referenceOutputs": []
+			} ],
+			"id": "OeeO30FOtm05rdNvfpbgQPsVTeZarsvA",
+			"nodeType": "repeat",
+			"parameters": []
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "4AWSbY51Elm9lgO93wrK4cfktjk22O8V",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "Exam.spies"
+				} ],
+				"referenceInputs": [ {
+					"name": "missioninfo",
+					"value": "missionInfo"
+				} ],
+				"referenceOutputs": []
+			} ],
+			"id": "hYT2Pk1xeMRg4ZozIeA7hh0QpssmBEGY",
+			"nodeType": "repeat",
+			"parameters": []
+		} ],
+		"id": "JsLzP9gXjLZLKoOBg4O0erxxUexEaXDC",
+		"nodeType": "roleSplit",
+		"parameters": [ {
+			"name": "mode",
+			"value": "all-success"
+		} ]
+	}
+}
