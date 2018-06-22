@@ -6,7 +6,7 @@ local sensorInfo = {
 	license = "notAlicense",
 }
 
-local EVAL_PERIOD_DEFAULT = -1 -- acutal, no caching
+local EVAL_PERIOD_DEFAULT = 0 -- acutal, no caching
 
 function getInfo()
 	return {
@@ -15,6 +15,7 @@ function getInfo()
 end
 
 -- global variable
+lastResult = nil
 
 -- return euclide distance
 function vectorsDistance(positionOne, positionTwo) 
@@ -24,6 +25,9 @@ end
 
 -- @description 
 return function(missionInfo)
+  if missionInfo == nil then
+    return lastResult 
+  end
   local teams = Spring.GetAllyTeamList()
   local myTeam = Spring.GetLocalTeamID()
   local coridorsFronts = {1,1,1}
@@ -51,5 +55,6 @@ return function(missionInfo)
       end
     end      
   end
+  lastResult = coridorsFronts
   return coridorsFronts    
 end

@@ -15,22 +15,26 @@ function getInfo()
 end
 
 -- global variable
-function isUnitAvaible(actualInfo, unitsIds, type)
+function isUnitAvaible(actualInfo, unitsIds, type)      
   if #unitsIds == 0 then
     return nil
   end
   for j = 1, #unitsIds do
-    local unitID = unitsIds[j]
+    local unitId = unitsIds[j]
+    local isFree = true
     for i = 1, #actualInfo do
       local unitID = 0
       if type then
-        unitID = actualInfo[i].transporter
+        unitID = actualInfo[i].id
       else
         unitID = actualInfo[i].box
       end
-      if unitID == unitID then
-        return unitID
+      if unitId == unitID then
+        isFree = false
       end
+    end
+    if isFree then
+      return unitId
     end
   end
   return nil
@@ -52,15 +56,17 @@ end
 
 
 local distance = 100
+local shift = 10
 
 -- @description 
-return function(actualInfo)
+return function(actualInfo) 
+  units = Sensors.Exam.GetUnits({armbox = true, armatlas = true})
   if #units == 0 then
     return nil
   end
   local restarts = {false, false, false}
   for i = 1, #actualInfo do
-    local transporter = actualInfo[i].transporter
+    local transporter = actualInfo[i].id
     local box = actualInfo[i].box
     if not Spring.ValidUnitID(transporter) or Spring.GetUnitIsDead(transporter) or not Spring.ValidUnitID(box) or Spring.GetUnitIsDead(box) then
       actualInfo[i] = nil 
@@ -73,7 +79,7 @@ return function(actualInfo)
       local atlas = isUnitAvaible(actualInfo, dividedUnits.atlases, true)
       local box = isUnitAvaible(actualInfo, dividedUnits.boxes, false)  
       if atlas ~= nil and box ~= nil then
-        actualInfo[#actualInfo + 1] = {transporter = atlas, box = box, distance = distance, pathId = i}
+        actualInfo[#actualInfo + 1] = {id = atlas, box = box, distance = distance, pathId = i, shift = shift}
       else
         break
       end

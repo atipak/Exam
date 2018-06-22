@@ -21,11 +21,15 @@ function isUnitAvaible(actualInfo, unitsIds)
   end
   for j = 1, #unitsIds do
     local unitID = unitsIds[j]
+    local isFree = true
     for i = 1, #actualInfo do
-      local unitID = actualInfo[i].id
-      if unitID == unitID then
-        return unitID
+      local unitId = actualInfo[i].id
+      if unitId == unitID then
+        isFree = false
       end
+    end
+    if isFree then
+      return unitID
     end
   end
   return nil
@@ -33,9 +37,11 @@ end
 
 
 local distance = 50
+local shift = 10
 
 -- @description 
 return function(actualInfo)
+  units = Sensors.Exam.GetUnits({armfark = true}) 
   if #units == 0 then
     return nil
   end
@@ -51,7 +57,7 @@ return function(actualInfo)
     if actualInfo[i] == nil then
       local unit = isUnitAvaible(actualInfo, units)  
       if unit ~= nil then
-        actualInfo[#actualInfo + 1] = {id = unit, distance = distance, pathId = i}
+        actualInfo[#actualInfo + 1] = {id = unit, distance = distance, pathId = i, shift = shift}
       else
         break
       end

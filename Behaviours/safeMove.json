@@ -33,9 +33,9 @@
 	} ],
 	"properties": {
 		"5DMfJkYqibPSsgBrC0xVVHNlAuv2LSoD": {
-			"height": 92,
+			"height": 94,
 			"title": "store",
-			"width": 201,
+			"width": 468,
 			"x": 654,
 			"y": -149
 		},
@@ -64,7 +64,7 @@
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 368,
+			"x": 369,
 			"y": 42
 		},
 		"tKhRCipccdkjoHXy95Z6J7ndJdzOCIQA": {
@@ -89,7 +89,7 @@
 				"value": "shiftInfo"
 			}, {
 				"name": "value",
-				"value": "{dir, unitInfo}"
+				"value": "Exam.ShiftInfo(unitInfo, currentDirection, currentIndex)"
 			}, {
 				"name": "scriptName",
 				"value": "store"

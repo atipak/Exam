@@ -1,0 +1,286 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 250,
+			"width": 254
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "unitInfo"
+	}, {
+		"command": "Variable",
+		"name": "missioninfo"
+	}, {
+		"command": "Variable",
+		"name": "currentIndex"
+	}, {
+		"command": "Variable",
+		"name": "currentDirection"
+	}, {
+		"command": "Variable",
+		"name": "path"
+	} ],
+	"outputs": [ {
+		"name": "firstBranch"
+	}, {
+		"name": "currentIndex"
+	}, {
+		"name": "currentDirection"
+	} ],
+	"properties": {
+		"0DuBZH84hFSnd5Pw5ut9oS3f4UvUag1f": {
+			"height": 92,
+			"title": "Exam.UnloadUnit",
+			"width": 262,
+			"x": 1762,
+			"y": 516
+		},
+		"0eBJWbFY3h6Qf2KOZSSy3w4J36mnwjpU": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 1299,
+			"y": -89
+		},
+		"16Q7S3dM3AK9fK59pSrl1FBOPdTyAUNE": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 323,
+			"y": 26
+		},
+		"6lF24GJiAUxJSJxwaxKUB439JQMheiLI": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 381,
+			"x": 572,
+			"y": 14
+		},
+		"9ocJWhYg0asdEPMbDskvCzAfOandeZlN": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 1420,
+			"y": 132
+		},
+		"U77NLAdCstnFBnVfZipFuSvvDZRwRUf5": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1340,
+			"y": 445
+		},
+		"Vir2cnMxldQmvK6LlmbfMttI8suNQyaH": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 194,
+			"x": 1036,
+			"y": 216
+		},
+		"cgiKRrnDHiK8N2jEXmSyfhiPpTZKD5kK": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1052,
+			"y": -124
+		},
+		"gUBVAE0qHaPexcADoi4MMgc63q9gey49": {
+			"height": 98,
+			"title": "store",
+			"width": 139,
+			"x": 1763,
+			"y": 342
+		},
+		"jdYyNZuHIVzb3ymKBi1g1wucNLbTwY70": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 588,
+			"y": -119
+		},
+		"mxR1tM3npKQdoILiIGGW0Kbf6eUWivGe": {
+			"height": 92,
+			"title": "Exam.Load",
+			"width": 262,
+			"x": 1249,
+			"y": -196
+		},
+		"noeYHPMHvuGSIhWVw177qHCbem9HsffO": {
+			"height": 257,
+			"title": "reference",
+			"width": 274,
+			"x": 1704,
+			"y": 47
+		},
+		"vUZxiZHQm9CC3XBgTpAA7cy0J281Rgh1": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 1765,
+			"y": 440
+		}
+	},
+	"roles": [ {
+		"categories": [ "nota_jd_convoy.AA" ],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "jdYyNZuHIVzb3ymKBi1g1wucNLbTwY70",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "moved"
+			}, {
+				"name": "value",
+				"value": "true"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [ {
+					"children": [],
+					"id": "mxR1tM3npKQdoILiIGGW0Kbf6eUWivGe",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "unitToRescue",
+						"value": "unitInfo.box"
+					}, {
+						"name": "unitId",
+						"value": "unitInfo.id"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.Load"
+					} ],
+					"scriptName": "Exam.Load"
+				}, {
+					"children": [],
+					"id": "0eBJWbFY3h6Qf2KOZSSy3w4J36mnwjpU",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "var",
+						"value": "moved"
+					}, {
+						"name": "value",
+						"value": "true"
+					}, {
+						"name": "scriptName",
+						"value": "store"
+					} ],
+					"scriptName": "store"
+				} ],
+				"id": "cgiKRrnDHiK8N2jEXmSyfhiPpTZKD5kK",
+				"nodeType": "sequence",
+				"parameters": []
+			}, {
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "noeYHPMHvuGSIhWVw177qHCbem9HsffO",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "Exam.safeMove"
+						} ],
+						"referenceInputs": [ {
+							"name": "path",
+							"value": "path"
+						}, {
+							"name": "unitInfo",
+							"value": "unitInfo"
+						}, {
+							"name": "currentIndex",
+							"value": "currentIndex"
+						}, {
+							"name": "currentDirection",
+							"value": "currentDirection"
+						} ],
+						"referenceOutputs": [ {
+							"name": "currentIndex",
+							"value": "currentIndex"
+						}, {
+							"name": "shiftInfo.direction",
+							"value": "currentDirection"
+						}, {
+							"name": "shiftInfo.moved",
+							"value": "moved"
+						} ]
+					} ],
+					"id": "9ocJWhYg0asdEPMbDskvCzAfOandeZlN",
+					"nodeType": "repeat",
+					"parameters": []
+				}, {
+					"children": [ {
+						"children": [],
+						"id": "gUBVAE0qHaPexcADoi4MMgc63q9gey49",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "firstBranch"
+						}, {
+							"name": "value",
+							"value": "false"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "vUZxiZHQm9CC3XBgTpAA7cy0J281Rgh1",
+						"nodeType": "wait",
+						"parameters": [ {
+							"name": "time",
+							"value": 3
+						} ]
+					}, {
+						"children": [],
+						"id": "0DuBZH84hFSnd5Pw5ut9oS3f4UvUag1f",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "unitToRescue",
+							"value": "unitInfo.box"
+						}, {
+							"name": "unitId",
+							"value": "unitInfo.id"
+						}, {
+							"name": "scriptName",
+							"value": "Exam.UnloadUnit"
+						} ],
+						"scriptName": "Exam.UnloadUnit"
+					} ],
+					"id": "U77NLAdCstnFBnVfZipFuSvvDZRwRUf5",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
+				"id": "Vir2cnMxldQmvK6LlmbfMttI8suNQyaH",
+				"nodeType": "luaCondition",
+				"parameters": [ {
+					"name": "expression",
+					"value": "moved"
+				}, {
+					"name": "repeat",
+					"value": "true"
+				} ]
+			} ],
+			"id": "6lF24GJiAUxJSJxwaxKUB439JQMheiLI",
+			"nodeType": "luaCondition",
+			"parameters": [ {
+				"name": "expression",
+				"value": "Spring.GetUnitTransporter(unitInfo.id) == nil"
+			}, {
+				"name": "repeat",
+				"value": "true"
+			} ]
+		} ],
+		"id": "16Q7S3dM3AK9fK59pSrl1FBOPdTyAUNE",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

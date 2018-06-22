@@ -31,7 +31,7 @@
 			"height": 90,
 			"title": "luaCondition",
 			"width": 397,
-			"x": 305,
+			"x": 306,
 			"y": 35
 		},
 		"GoSDP0tQw5mVFGyViR0ZttwgBRGAPxYY": {
@@ -159,7 +159,7 @@
 						"value": "subPath"
 					}, {
 						"name": "unitId",
-						"value": "unitInfo.transporter"
+						"value": "unitInfo.id"
 					}, {
 						"name": "scriptName",
 						"value": "Exam.AlongPath"
@@ -208,7 +208,7 @@
 		"nodeType": "luaCondition",
 		"parameters": [ {
 			"name": "expression",
-			"value": "Exam.areAllyUnitsInArea(unitInfo.transporter, 200) > 5"
+			"value": "Exam.areAllyUnitsInArea(unitInfo.id, 200) > 5"
 		}, {
 			"name": "repeat",
 			"value": "true"
