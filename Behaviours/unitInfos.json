@@ -1,0 +1,129 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 208,
+			"width": 216
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "newInfos"
+	} ],
+	"outputs": [ {
+		"name": "restartOne"
+	}, {
+		"name": "restartTwo"
+	}, {
+		"name": "restartThree"
+	}, {
+		"name": "newInfo"
+	} ],
+	"properties": {
+		"bppD16qeCdMAxFE5yCmEEieVCMa5GKJk": {
+			"height": 92,
+			"title": "store",
+			"width": 211,
+			"x": 475,
+			"y": 205
+		},
+		"c2p1duxZKUtUP8hqnv9LN9ggVaNsHWER": {
+			"height": 92,
+			"title": "store",
+			"width": 197,
+			"x": 459,
+			"y": -94
+		},
+		"np31yYp7UyQWkFT0rBFsRQjRpx17kZdj": {
+			"height": 92,
+			"title": "store",
+			"width": 211,
+			"x": 474,
+			"y": 108
+		},
+		"o17MOC7pNAQRJ8kKcTTKNENEE8raAclP": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 291,
+			"y": 50
+		},
+		"yi3aUWlz5E1cZyUt8WXzk6QqAVejAxbx": {
+			"height": 92,
+			"title": "store",
+			"width": 211,
+			"x": 469,
+			"y": 1
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "c2p1duxZKUtUP8hqnv9LN9ggVaNsHWER",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "newInfo"
+			}, {
+				"name": "value",
+				"value": "newInfos.newInfo"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "yi3aUWlz5E1cZyUt8WXzk6QqAVejAxbx",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "restartOne"
+			}, {
+				"name": "value",
+				"value": "newInfos.restarts[1]"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "np31yYp7UyQWkFT0rBFsRQjRpx17kZdj",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "restartTwo"
+			}, {
+				"name": "value",
+				"value": "newInfos.restarts[2]"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "bppD16qeCdMAxFE5yCmEEieVCMa5GKJk",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "restartThree"
+			}, {
+				"name": "value",
+				"value": "newInfos.restarts[3]"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		} ],
+		"id": "o17MOC7pNAQRJ8kKcTTKNENEE8raAclP",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

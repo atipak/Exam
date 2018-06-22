@@ -16,63 +16,77 @@
 			"height": 90,
 			"title": "luaCondition",
 			"width": 194,
-			"x": 1387,
+			"x": 1386,
 			"y": 392
 		},
 		"6MQkBZvlXAkuqX2jLpATwkjljusydVow": {
 			"height": 92,
 			"title": "store",
 			"width": 150,
-			"x": 464,
+			"x": 465,
 			"y": -98
 		},
 		"7un8OU49R9EQlJ4xYu7lRHYm3f4orlI8": {
 			"height": 90,
 			"title": "luaCondition",
 			"width": 194,
-			"x": 1383,
+			"x": 1382,
 			"y": 711
+		},
+		"Bn52bM4FI1ryGvZlgLo5TAyzYk4CN1QV": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1122,
+			"y": -147
 		},
 		"Ic2HBKGmKdDokEv1LFiCIJS4ljmZpSG5": {
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 1631,
+			"x": 1630,
 			"y": 22
 		},
 		"IhS2RJK8knM8mgMVKencjqzLOR8swFin": {
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 1185,
+			"x": 1186,
 			"y": 728
+		},
+		"JSaAF9V59UiWG0oqcxrHkWKqw9g4dBJE": {
+			"height": 94,
+			"title": "store",
+			"width": 250,
+			"x": 1341,
+			"y": -291
 		},
 		"LsuBCZQilWSI9yHmlfVunj15HHGOuWNo": {
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 925,
+			"x": 927,
 			"y": -144
 		},
 		"OeGXh8TRQWY7Vg2H4zL5MZgLE4Gy8j6U": {
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 467,
+			"x": 468,
 			"y": -200
 		},
 		"QGsFZR078aKHnKTy7XPxhcnyMvKFKVPq": {
 			"height": 70,
 			"title": "parallel",
 			"width": 207,
-			"x": 869,
+			"x": 872,
 			"y": 211
 		},
 		"VkPmQgE9kf84wFlHPoQi1ENFzgymgMi1": {
 			"height": 172,
 			"title": "reference",
 			"width": 238,
-			"x": 1618,
+			"x": 1617,
 			"y": 114
 		},
 		"bGMjafukvnFYjRhX7sfgfaporadwnKFD": {
@@ -86,21 +100,21 @@
 			"height": 172,
 			"title": "reference",
 			"width": 208,
-			"x": 1603,
+			"x": 1602,
 			"y": 768
 		},
 		"bpWq9AExCHg98yBQE7R8Efb4aCo087y4": {
 			"height": 70,
 			"title": "parallel",
 			"width": 207,
-			"x": 583,
+			"x": 586,
 			"y": 35
 		},
 		"fzOgLowk7bMOqk3YpBAUMmusbHL49NZa": {
 			"height": 172,
 			"title": "reference",
 			"width": 208,
-			"x": 1626,
+			"x": 1625,
 			"y": 396
 		},
 		"iL5zpzUwWVMH1GSUTKeuDYsh1H40UNBF": {
@@ -114,35 +128,42 @@
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 469,
+			"x": 470,
 			"y": -294
 		},
 		"lXEaBwYJuLRmbdPJJfLuGbo2shLiGXbX": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 261,
+			"x": 262,
 			"y": 36
 		},
 		"rJzYvDGK0hEn1MoxSVVLDJ5nh2lgOn48": {
 			"height": 92,
 			"title": "store",
 			"width": 207,
-			"x": 1627,
+			"x": 1626,
 			"y": 292
 		},
 		"vhw5oi7lXwnpiLl9a5f4VdV9DqIfx6tk": {
 			"height": 92,
 			"title": "store",
 			"width": 200,
-			"x": 473,
+			"x": 474,
 			"y": -402
+		},
+		"vpVq7WWkUKJe97zU1opyhDqHMInMGfxR": {
+			"height": 215,
+			"title": "reference",
+			"width": 223,
+			"x": 1339,
+			"y": -187
 		},
 		"wdpbVEX7YUCqlQ8BAQvBzWnMUqPxZ4iK": {
 			"height": 92,
 			"title": "store",
 			"width": 150,
-			"x": 1619,
+			"x": 1618,
 			"y": 638
 		},
 		"xZSPvg66xEoBVHZdRKTCG4H0mLUjl6co": {
@@ -220,7 +241,52 @@
 			"scriptName": "store"
 		}, {
 			"children": [ {
-				"children": [],
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "JSaAF9V59UiWG0oqcxrHkWKqw9g4dBJE",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "newUnitInfos"
+						}, {
+							"name": "value",
+							"value": "Exam.FarksInfo(unitInfos)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "vpVq7WWkUKJe97zU1opyhDqHMInMGfxR",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "Exam.unitInfos"
+						} ],
+						"referenceInputs": [ {
+							"name": "newInfos",
+							"value": "newUnitInfos"
+						} ],
+						"referenceOutputs": [ {
+							"name": "restartOne",
+							"value": "restartOne"
+						}, {
+							"name": "restartTwo",
+							"value": "restartTwo"
+						}, {
+							"name": "restartThree",
+							"value": "restartThree"
+						}, {
+							"name": "newInfo",
+							"value": "unitInfos"
+						} ]
+					} ],
+					"id": "Bn52bM4FI1ryGvZlgLo5TAyzYk4CN1QV",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
 				"id": "LsuBCZQilWSI9yHmlfVunj15HHGOuWNo",
 				"nodeType": "repeat",
 				"parameters": []

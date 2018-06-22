@@ -12,11 +12,18 @@
 	} ],
 	"outputs": [],
 	"properties": {
+		"0hJI0Xc5DIKFylZt19ycklMEoNQ6dulZ": {
+			"height": 94,
+			"title": "store",
+			"width": 249,
+			"x": 1301,
+			"y": -259
+		},
 		"1nFAtykBLtUZAMxMd1842r15s9L6k7a2": {
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 469,
+			"x": 470,
 			"y": -294
 		},
 		"607zBqnawPLTEO8EgYRoLFAq4vZOah0j": {
@@ -30,7 +37,7 @@
 			"height": 92,
 			"title": "store",
 			"width": 200,
-			"x": 473,
+			"x": 474,
 			"y": -402
 		},
 		"9rwx8OEi831m2Xzn9uldl0EaH6S5ZAzK": {
@@ -47,6 +54,13 @@
 			"x": 1197,
 			"y": 114
 		},
+		"BmrG9vuaGF83RCNp9Du9m2jjX7LzJIkn": {
+			"height": 215,
+			"title": "reference",
+			"width": 223,
+			"x": 1292,
+			"y": -129
+		},
 		"HzEKCgHnyDssiLyICpjj8OUWdMMujgJ9": {
 			"height": 60,
 			"title": "repeat",
@@ -58,8 +72,15 @@
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 467,
+			"x": 468,
 			"y": -200
+		},
+		"JayFyFk2ipKYm224PpqFdR7QhqiZXBkP": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1102,
+			"y": -145
 		},
 		"LO8ZwhsDnoVen7Lc6j1gJe3cyvSLulGE": {
 			"height": 172,
@@ -72,7 +93,7 @@
 			"height": 70,
 			"title": "parallel",
 			"width": 207,
-			"x": 869,
+			"x": 870,
 			"y": 211
 		},
 		"VM9kRFTanCTvuipo9aJo6kURWcF1p1ai": {
@@ -114,14 +135,14 @@
 			"height": 70,
 			"title": "parallel",
 			"width": 207,
-			"x": 583,
+			"x": 584,
 			"y": 35
 		},
 		"mcPYrK6qbv3CoGsvZLJAwteQsqlYKgaT": {
 			"height": 92,
 			"title": "store",
 			"width": 150,
-			"x": 464,
+			"x": 465,
 			"y": -98
 		},
 		"mz13lk9Ji87AA7jMlCOXxIgfZwURYfo5": {
@@ -220,7 +241,52 @@
 			"scriptName": "store"
 		}, {
 			"children": [ {
-				"children": [],
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "0hJI0Xc5DIKFylZt19ycklMEoNQ6dulZ",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "infos"
+						}, {
+							"name": "value",
+							"value": "Exam.SpiesInfo(unitInfos)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "BmrG9vuaGF83RCNp9Du9m2jjX7LzJIkn",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "Exam.unitInfos"
+						} ],
+						"referenceInputs": [ {
+							"name": "newInfos",
+							"value": "infos"
+						} ],
+						"referenceOutputs": [ {
+							"name": "restartOne",
+							"value": "restartOne"
+						}, {
+							"name": "restartTwo",
+							"value": "restartTwo"
+						}, {
+							"name": "restartThree",
+							"value": "restartThree"
+						}, {
+							"name": "newInfo",
+							"value": "unitInfos"
+						} ]
+					} ],
+					"id": "JayFyFk2ipKYm224PpqFdR7QhqiZXBkP",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
 				"id": "HzEKCgHnyDssiLyICpjj8OUWdMMujgJ9",
 				"nodeType": "repeat",
 				"parameters": []

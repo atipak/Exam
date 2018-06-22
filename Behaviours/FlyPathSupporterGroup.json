@@ -16,7 +16,7 @@
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 469,
+			"x": 470,
 			"y": -294
 		},
 		"3Fqgdf9GXmwvQfqr1XJoMmj1I9WHe41S": {
@@ -30,21 +30,28 @@
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 1185,
+			"x": 1186,
 			"y": 728
+		},
+		"7jQvoPNMqq9Zdr75rynLzhTT0WNcICeS": {
+			"height": 94,
+			"title": "store",
+			"width": 233,
+			"x": 1332,
+			"y": -240
 		},
 		"ANaM6aFdzC78QZoerGYxg00QTj6VGTF6": {
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 926,
+			"x": 927,
 			"y": -144
 		},
 		"JGEFdXBM3wuAFsQEgUgwCydYIiXyUhL3": {
 			"height": 60,
 			"title": "sequence",
 			"width": 143,
-			"x": 261,
+			"x": 262,
 			"y": 36
 		},
 		"M35diIzXViDK9RWEktr2mMF4u7HT2aeH": {
@@ -58,7 +65,7 @@
 			"height": 92,
 			"title": "store",
 			"width": 200,
-			"x": 473,
+			"x": 474,
 			"y": -402
 		},
 		"Upmr66HLrWIxkQ1pFJuvFJGpRWXZQGz6": {
@@ -72,8 +79,15 @@
 			"height": 92,
 			"title": "store",
 			"width": 139,
-			"x": 467,
+			"x": 468,
 			"y": -200
+		},
+		"XeCu6WVwlFW9xJADlYbJMmtVMi9TBr6P": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1130,
+			"y": -143
 		},
 		"YItLasHtrBPb3ZUcLy8O8XQkj0vfMT5B": {
 			"height": 92,
@@ -88,6 +102,13 @@
 			"width": 194,
 			"x": 1370,
 			"y": 103
+		},
+		"eidf18JSJemnEvsLN7NKxSclMNihVslg": {
+			"height": 215,
+			"title": "reference",
+			"width": 223,
+			"x": 1312,
+			"y": -135
 		},
 		"gYycZihvVSsCd9UmbxHTynB3Uj0gTi4u": {
 			"height": 172,
@@ -107,21 +128,21 @@
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 1197,
+			"x": 1198,
 			"y": 114
 		},
 		"oBL7j0nDhEcuzy9OOhFbPW0CZX4qvxYs": {
 			"height": 70,
 			"title": "parallel",
 			"width": 207,
-			"x": 870,
+			"x": 871,
 			"y": 211
 		},
 		"oMolfLt7ED87KLPeSgVsGHOOCYBhXXVr": {
 			"height": 70,
 			"title": "parallel",
 			"width": 207,
-			"x": 584,
+			"x": 585,
 			"y": 35
 		},
 		"pIj81cRQV5hrYmJTkxVDzdPayOmm1Hpn": {
@@ -142,14 +163,14 @@
 			"height": 92,
 			"title": "store",
 			"width": 150,
-			"x": 464,
+			"x": 465,
 			"y": -98
 		},
 		"yBhrYoteltjqMJ8DZLiy7417g92YiDfn": {
 			"height": 60,
 			"title": "repeat",
 			"width": 131,
-			"x": 1196,
+			"x": 1197,
 			"y": 406
 		}
 	},
@@ -220,7 +241,52 @@
 			"scriptName": "store"
 		}, {
 			"children": [ {
-				"children": [],
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "7jQvoPNMqq9Zdr75rynLzhTT0WNcICeS",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "infos"
+						}, {
+							"name": "value",
+							"value": "Exam.FlyInfo(unitInfos)"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					}, {
+						"children": [],
+						"id": "eidf18JSJemnEvsLN7NKxSclMNihVslg",
+						"nodeType": "reference",
+						"parameters": [ {
+							"name": "behaviourName",
+							"value": "Exam.unitInfos"
+						} ],
+						"referenceInputs": [ {
+							"name": "newInfos",
+							"value": "infos"
+						} ],
+						"referenceOutputs": [ {
+							"name": "restartOne",
+							"value": "restartOne"
+						}, {
+							"name": "restartTwo",
+							"value": "restartTwo"
+						}, {
+							"name": "restartThree",
+							"value": "restartThree"
+						}, {
+							"name": "newInfo",
+							"value": "unitInfos"
+						} ]
+					} ],
+					"id": "XeCu6WVwlFW9xJADlYbJMmtVMi9TBr6P",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
 				"id": "ANaM6aFdzC78QZoerGYxg00QTj6VGTF6",
 				"nodeType": "repeat",
 				"parameters": []
