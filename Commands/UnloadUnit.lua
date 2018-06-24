@@ -18,8 +18,22 @@ function getInfo()
 	}
 end
 
+clock = os.clock
+lastTime = 0
+timeout = 3
 
-
+function checkTime()
+  if lastTime == 0 then
+    lastTime = clock()
+  end
+  if clock() - lastTime > timeout then 
+   lastTime = clock()
+   return true
+  else
+    return false
+  end
+  return false
+end
 
 -- unload unit
 function Run(self, unitIds, parameter)  
@@ -29,8 +43,10 @@ function Run(self, unitIds, parameter)
     if isUnloaded(unitId, unitToRescue) then
       return SUCCESS
     else 
-      local lx, ly, lz = Spring.GetUnitPosition(unitId)  
-      Spring.GiveOrderToUnit(unitId, CMD.UNLOAD_UNITS, {lx, ly, lz, 15} , {})
+      if checkTime() then
+        local lx, ly, lz = Spring.GetUnitPosition(unitId)  
+        Spring.GiveOrderToUnit(unitId, CMD.UNLOAD_UNITS, {lx, ly, lz, 65} , {})
+      end
       return RUNNING
     end
   else 

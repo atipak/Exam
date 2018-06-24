@@ -1,0 +1,78 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 148,
+			"width": 227
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "missioninfo"
+	} ],
+	"outputs": [],
+	"properties": {
+		"FxhzUlJ0YX9kbIKA8kzNxSjo0WjPIwKk": {
+			"height": 94,
+			"title": "store",
+			"width": 355,
+			"x": 484,
+			"y": -21
+		},
+		"eJ4uDD8WDLlpt2PfmkIrIIotJazJiI3M": {
+			"height": 58,
+			"title": "sequence",
+			"width": 143,
+			"x": 262,
+			"y": 36
+		},
+		"yr6zlkckDDm2TBiqVAlZepegvLd6Jrlu": {
+			"height": 151,
+			"title": "reference",
+			"width": 238,
+			"x": 487,
+			"y": 84
+		}
+	},
+	"roles": [ {
+		"categories": [ "nota_jd_convoy.AA" ],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "FxhzUlJ0YX9kbIKA8kzNxSjo0WjPIwKk",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "unitInfos"
+			}, {
+				"name": "value",
+				"value": "Exam.PowerInfoSec()"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "yr6zlkckDDm2TBiqVAlZepegvLd6Jrlu",
+			"nodeType": "reference",
+			"parameters": [ {
+				"name": "behaviourName",
+				"value": "Exam.PowNew"
+			} ],
+			"referenceInputs": [ {
+				"name": "unitsInfo",
+				"value": "unitInfos[1]"
+			}, {
+				"name": "missioninfo",
+				"value": "missioninfo"
+			} ],
+			"referenceOutputs": []
+		} ],
+		"id": "eJ4uDD8WDLlpt2PfmkIrIIotJazJiI3M",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

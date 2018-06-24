@@ -1,0 +1,110 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 148,
+			"width": 227
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "unitsInfo"
+	}, {
+		"command": "Variable",
+		"name": "missioninfo"
+	} ],
+	"outputs": [],
+	"properties": {
+		"0cFZOuUYkAfm2s7g03mrrBAWbqAsmTPv": {
+			"height": 94,
+			"title": "store",
+			"width": 365,
+			"x": 939,
+			"y": -38
+		},
+		"1lK7ARltaPmtLfjsWkmUSSxkcCsp4dTu": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 765,
+			"y": 37
+		},
+		"32sRFTQD2ddNZ5ZuyK5s5IC2CtZTyYpA": {
+			"height": 92,
+			"title": "Exam.SendAll",
+			"width": 170,
+			"x": 944,
+			"y": 76
+		},
+		"RLkpPkSqDCCRLHAvzPyX7xRAtICN6E9U": {
+			"height": 88,
+			"title": "luaCondition",
+			"width": 202,
+			"x": 364,
+			"y": 29
+		},
+		"eXZSJsv5aQuL8eBcoXkfayS09jZjljvq": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 713,
+			"y": -67
+		}
+	},
+	"roles": [ {
+		"categories": [ "nota_jd_convoy.AA" ],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "eXZSJsv5aQuL8eBcoXkfayS09jZjljvq",
+			"nodeType": "success",
+			"parameters": []
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "0cFZOuUYkAfm2s7g03mrrBAWbqAsmTPv",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "path"
+				}, {
+					"name": "value",
+					"value": "Exam.GetPath(unitsInfo.pathId, missioninfo)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "32sRFTQD2ddNZ5ZuyK5s5IC2CtZTyYpA",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "path",
+					"value": "path"
+				}, {
+					"name": "unitIds",
+					"value": "unitsInfo.ids"
+				}, {
+					"name": "scriptName",
+					"value": "Exam.SendAll"
+				} ],
+				"scriptName": "Exam.SendAll"
+			} ],
+			"id": "1lK7ARltaPmtLfjsWkmUSSxkcCsp4dTu",
+			"nodeType": "sequence",
+			"parameters": []
+		} ],
+		"id": "RLkpPkSqDCCRLHAvzPyX7xRAtICN6E9U",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "unitsInfo == nil"
+		}, {
+			"name": "repeat",
+			"value": "true"
+		} ]
+	}
+}

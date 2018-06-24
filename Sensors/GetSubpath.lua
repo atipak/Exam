@@ -1,6 +1,6 @@
 local sensorInfo = {
-	name = "CreatesTriplets",
-	desc = "Add to given array with already stored keys a new key with begin positions",
+	name = "GetSubpath",
+	desc = "Returns a subpath from a given path (both indeces are inclusive)",
 	author = "Patik",
 	date = "2018-05-11",
 	license = "notAlicense",
@@ -25,7 +25,7 @@ return function(beginIndex, endIndex, path)
     shift = -1
   end
   for i = beginIndex, endIndex, shift do
-    subpath[#subpath + 1] = path[i]
+    subpath[#subpath + 1] = path[i].position
   end
   return subpath
 end

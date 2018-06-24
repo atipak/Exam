@@ -1,0 +1,378 @@
+{
+	"additionalNodes": [ {
+		"children": [ {
+			"children": [],
+			"id": "nRf8VKuSBceq6qvnndznq3Ltxgj8qZf5",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "unitName",
+				"value": "'armbox'"
+			}, {
+				"name": "scriptName",
+				"value": "Exam.BuySomething"
+			} ],
+			"scriptName": "Exam.BuySomething"
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "EJ5ibp21Pq5XtEisgBS9S96Znuwlopq5",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "unitName",
+					"value": "'armatlas'"
+				}, {
+					"name": "scriptName",
+					"value": "Exam.BuySomething"
+				} ],
+				"scriptName": "Exam.BuySomething"
+			}, {
+				"children": [ {
+					"children": [],
+					"id": "ETX4GY52dmJXE1fLRNj8O1hrWqDDzcWf",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "unitName",
+						"value": "'armspy'"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.BuySomething"
+					} ],
+					"scriptName": "Exam.BuySomething"
+				}, {
+					"children": [ {
+						"children": [],
+						"id": "BIVdrygb82YW63ECzimPLun6EGfeXOaS",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "unitName",
+							"value": "'armzeus'"
+						}, {
+							"name": "scriptName",
+							"value": "Exam.BuySomething"
+						} ],
+						"scriptName": "Exam.BuySomething"
+					}, {
+						"children": [],
+						"id": "CeYNuCWdVItK7GC8c3kvJ6uyXCG1xesC",
+						"nodeType": "success",
+						"parameters": []
+					} ],
+					"id": "X5OY1R99jJ0lSMGpSg8TyR4FO668wCOl",
+					"nodeType": "luaCondition",
+					"parameters": [ {
+						"name": "expression",
+						"value": "Exam.NeedToBuy(8, {armzeus = true})"
+					}, {
+						"name": "repeat",
+						"value": "true"
+					} ]
+				} ],
+				"id": "e74lTw2S0T8OLW55JnvIqjcPI8eNalOh",
+				"nodeType": "luaCondition",
+				"parameters": [ {
+					"name": "expression",
+					"value": "Exam.NeedToBuy(3, {armspy = true})"
+				}, {
+					"name": "repeat",
+					"value": "true"
+				} ]
+			} ],
+			"id": "jbcyQEsizXTfPr03w87OKgdcfS2IQPt3",
+			"nodeType": "luaCondition",
+			"parameters": [ {
+				"name": "expression",
+				"value": "Exam.NeedToBuy(3, {armatlas = true})"
+			}, {
+				"name": "repeat",
+				"value": "true"
+			} ]
+		} ],
+		"id": "rSY1O8gHZA4nJRiC1lyMXQj1FKLxEw4o",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "Exam.NeedToBuy(3, {armbox = true})"
+		}, {
+			"name": "repeat",
+			"value": "true"
+		} ]
+	}, {
+		"children": [],
+		"id": "L0gwiGFWcquenI3tZC3u9h44JcToQeGk",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "Exam.NeedToBuy(3, {armfark = true})"
+		}, {
+			"name": "repeat",
+			"value": "true"
+		} ]
+	} ],
+	"additionalParameters": {
+		"root": {
+			"height": 128,
+			"width": 224
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "waitTime"
+	}, {
+		"command": "Variable",
+		"name": "missionInfo"
+	} ],
+	"outputs": [],
+	"properties": {
+		"BIVdrygb82YW63ECzimPLun6EGfeXOaS": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 3575,
+			"y": -794
+		},
+		"CeYNuCWdVItK7GC8c3kvJ6uyXCG1xesC": {
+			"height": 54,
+			"title": "success",
+			"width": 158,
+			"x": 3604,
+			"y": -524
+		},
+		"EJ5ibp21Pq5XtEisgBS9S96Znuwlopq5": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 2784,
+			"y": -846
+		},
+		"ETX4GY52dmJXE1fLRNj8O1hrWqDDzcWf": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 3171,
+			"y": -730
+		},
+		"JrCkof5hBpG5C2GQiTiu9IedB0T4XRxq": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 1378,
+			"y": -123
+		},
+		"L0gwiGFWcquenI3tZC3u9h44JcToQeGk": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 285,
+			"x": 1759,
+			"y": -1053
+		},
+		"PQjyGSwM8MaugsxeotYmPhl8BSa8vZaS": {
+			"height": 72,
+			"title": "wait",
+			"width": 136,
+			"x": 1560,
+			"y": -62
+		},
+		"R8cMVGE8Jzsdjq0oleNG1qZqWM2tL6M3": {
+			"height": 130,
+			"title": "reference",
+			"width": 247,
+			"x": 1259,
+			"y": 181
+		},
+		"RT4uyACfjrNVpvCvjr4tEAech9rQxdQs": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 291,
+			"y": 14
+		},
+		"UgGFuMF8Qlt67Y8Jr6rS8tt26F0GXqJi": {
+			"height": 108,
+			"title": "luaCondition",
+			"width": 194,
+			"x": 661,
+			"y": 1
+		},
+		"X5OY1R99jJ0lSMGpSg8TyR4FO668wCOl": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 291,
+			"x": 3116,
+			"y": -629
+		},
+		"aTlKEOQvHxlTgMMpnamCeRSRiRTh44GE": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 1097,
+			"y": -121
+		},
+		"dHDGaJ1RvxRj07I9xTOXQyNPbav3VATp": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 684,
+			"y": -171
+		},
+		"e74lTw2S0T8OLW55JnvIqjcPI8eNalOh": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 283,
+			"x": 2766,
+			"y": -747
+		},
+		"jbcyQEsizXTfPr03w87OKgdcfS2IQPt3": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 291,
+			"x": 2442,
+			"y": -857
+		},
+		"kv9Tywdc4ti4oJLepUqUNhdsrXPgISTn": {
+			"height": 92,
+			"title": "store",
+			"width": 131,
+			"x": 1554,
+			"y": 25
+		},
+		"nRf8VKuSBceq6qvnndznq3Ltxgj8qZf5": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 2452,
+			"y": -958
+		},
+		"rSY1O8gHZA4nJRiC1lyMXQj1FKLxEw4o": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 284,
+			"x": 2073,
+			"y": -965
+		},
+		"yHtBbZOkfsll8vtUhIeaMMqxoK6V3tb9": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 1553,
+			"y": -133
+		},
+		"zjru5vIR6EMO0zYs8jSibaCw5XZyMTW1": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 1375,
+			"y": -20
+		}
+	},
+	"roles": [ {
+		"categories": [ "Exam.Farks" ],
+		"name": "Farks"
+	}, {
+		"categories": [ "Exam.AtlasBoxes" ],
+		"name": "FlyBoxes"
+	}, {
+		"categories": [ "Exam.MavZeus" ],
+		"name": "Power"
+	}, {
+		"categories": [],
+		"name": "Hidden"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "dHDGaJ1RvxRj07I9xTOXQyNPbav3VATp",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "buying"
+			}, {
+				"name": "value",
+				"value": "true"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [ {
+					"children": [ {
+						"children": [],
+						"id": "yHtBbZOkfsll8vtUhIeaMMqxoK6V3tb9",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "unitName",
+							"value": "'armzeus'"
+						}, {
+							"name": "scriptName",
+							"value": "Exam.BuySomething"
+						} ],
+						"scriptName": "Exam.BuySomething"
+					} ],
+					"id": "JrCkof5hBpG5C2GQiTiu9IedB0T4XRxq",
+					"nodeType": "repeat",
+					"parameters": []
+				}, {
+					"children": [ {
+						"children": [],
+						"id": "PQjyGSwM8MaugsxeotYmPhl8BSa8vZaS",
+						"nodeType": "wait",
+						"parameters": [ {
+							"name": "time",
+							"value": 780
+						} ]
+					}, {
+						"children": [],
+						"id": "kv9Tywdc4ti4oJLepUqUNhdsrXPgISTn",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "var",
+							"value": "buying"
+						}, {
+							"name": "value",
+							"value": "false"
+						}, {
+							"name": "scriptName",
+							"value": "store"
+						} ],
+						"scriptName": "store"
+					} ],
+					"id": "zjru5vIR6EMO0zYs8jSibaCw5XZyMTW1",
+					"nodeType": "sequence",
+					"parameters": []
+				} ],
+				"id": "aTlKEOQvHxlTgMMpnamCeRSRiRTh44GE",
+				"nodeType": "parallel",
+				"parameters": [ {
+					"name": "mode",
+					"value": "all-success"
+				} ]
+			}, {
+				"children": [],
+				"id": "R8cMVGE8Jzsdjq0oleNG1qZqWM2tL6M3",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "Exam.PowerNew"
+				} ],
+				"referenceInputs": [ {
+					"name": "missioninfo",
+					"value": "missionInfo"
+				} ],
+				"referenceOutputs": []
+			} ],
+			"id": "UgGFuMF8Qlt67Y8Jr6rS8tt26F0GXqJi",
+			"nodeType": "luaCondition",
+			"parameters": [ {
+				"name": "expression",
+				"value": "buying"
+			}, {
+				"name": "repeat",
+				"value": "true"
+			} ]
+		} ],
+		"id": "RT4uyACfjrNVpvCvjr4tEAech9rQxdQs",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

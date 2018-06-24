@@ -1,6 +1,6 @@
 local sensorInfo = {
-	name = "CreatesTriplets",
-	desc = "Add to given array with already stored keys a new key with begin positions",
+	name = "GetUpdatedPath",
+	desc = "Returns updated path from misssionInfo and path identificator",
 	author = "Patik",
 	date = "2018-05-11",
 	license = "notAlicense",
@@ -18,10 +18,7 @@ end
 
 
 -- @description 
-return function(path)
-  local reversed = {}
-  for i = 1, #path do
-    reversed[i] = path[#path - i + 1]
-  end
-  return reversed
+return function(pathId)
+  local missInfo = Sensors.Exam.ChangeMissionInfo(Sensors.core.MissionInfo())
+  return missInfo.corridors[pathId]
 end

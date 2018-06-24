@@ -1,0 +1,236 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 128,
+			"width": 224
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "pathId"
+	}, {
+		"command": "Variable",
+		"name": "missionInfo"
+	} ],
+	"outputs": [],
+	"properties": {
+		"0wvfyvcw1De70IOiJFW8hNkS6yYteW5L": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 801,
+			"y": 218
+		},
+		"7IlCzhoNrZkLASNJ3LOV1gIaYICiuuxf": {
+			"height": 94,
+			"title": "store",
+			"width": 402,
+			"x": 743,
+			"y": -176
+		},
+		"JpoOCK4DPsHVY8LRlUtIK4bXJx0sEOfc": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 517,
+			"y": 45
+		},
+		"N3liynDB8Ptc7bvxoyIsK9ZUIBDiUeh5": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 767,
+			"y": 116
+		},
+		"NlTDXWuwz0tSm4fP8pxZd6rW247xbphm": {
+			"height": 152,
+			"title": "PathExploration",
+			"width": 194,
+			"x": 1021,
+			"y": 58
+		},
+		"PmtrQn1wBiUSBZbOLz5tKsYwXAIrSo7d": {
+			"height": 94,
+			"title": "store",
+			"width": 222,
+			"x": 740,
+			"y": -360
+		},
+		"V1byGDUHaHb2wL6PXyznWiGI1HOHVkwi": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 310,
+			"y": 58
+		},
+		"geROEbESlRN6Hq1AenTDuhBCY8k1Pfhh": {
+			"height": 151,
+			"title": "Seer",
+			"width": 249,
+			"x": 1171,
+			"y": -92
+		},
+		"hxHTgN6614kwcpxRkrCJcqtXxfHqVRTz": {
+			"height": 151,
+			"title": "Box",
+			"width": 198,
+			"x": 1184,
+			"y": 368
+		},
+		"mHaMa9DrX4XOH8BWWMNxgLXonikV8Igj": {
+			"height": 151,
+			"title": "Luger",
+			"width": 224,
+			"x": 1173,
+			"y": 215
+		},
+		"uSytmUBRcOQzh0ZPIWKQI3cRqSkt61wy": {
+			"height": 94,
+			"title": "store",
+			"width": 329,
+			"x": 741,
+			"y": -271
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [ {
+				"children": [],
+				"id": "PmtrQn1wBiUSBZbOLz5tKsYwXAIrSo7d",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "missionInfo"
+				}, {
+					"name": "value",
+					"value": "core.MissionInfo()"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "uSytmUBRcOQzh0ZPIWKQI3cRqSkt61wy",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "missionInfo"
+				}, {
+					"name": "value",
+					"value": "Exam.ChangeMissionInfo(missionInfo)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [],
+				"id": "7IlCzhoNrZkLASNJ3LOV1gIaYICiuuxf",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "var",
+					"value": "path"
+				}, {
+					"name": "value",
+					"value": "Exam.GetPath(pathId,missionInfo)"
+				}, {
+					"name": "scriptName",
+					"value": "store"
+				} ],
+				"scriptName": "store"
+			}, {
+				"children": [ {
+					"children": [],
+					"id": "geROEbESlRN6Hq1AenTDuhBCY8k1Pfhh",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "Exam.ShowEverythingSeer"
+					} ],
+					"referenceInputs": [ {
+						"name": "pathId",
+						"value": "pathId"
+					}, {
+						"name": "path",
+						"value": "path"
+					} ],
+					"referenceOutputs": []
+				}, {
+					"children": [],
+					"id": "NlTDXWuwz0tSm4fP8pxZd6rW247xbphm",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "Exam.ExplorePath"
+					} ],
+					"referenceInputs": [ {
+						"name": "path",
+						"value": "path"
+					} ],
+					"referenceOutputs": [ {
+						"name": "pathInfo",
+						"value": "EnemyInfo"
+					} ]
+				}, {
+					"children": [],
+					"id": "mHaMa9DrX4XOH8BWWMNxgLXonikV8Igj",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "Exam.FightWithLuger"
+					} ],
+					"referenceInputs": [ {
+						"name": "pathId",
+						"value": "pathId"
+					}, {
+						"name": "path",
+						"value": "path"
+					} ],
+					"referenceOutputs": []
+				}, {
+					"children": [],
+					"id": "hxHTgN6614kwcpxRkrCJcqtXxfHqVRTz",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "Exam.MightyBoxes"
+					} ],
+					"referenceInputs": [ {
+						"name": "pathId",
+						"value": "pathId"
+					}, {
+						"name": "path",
+						"value": "path"
+					} ],
+					"referenceOutputs": []
+				} ],
+				"id": "N3liynDB8Ptc7bvxoyIsK9ZUIBDiUeh5",
+				"nodeType": "parallel",
+				"parameters": [ {
+					"name": "mode",
+					"value": "all-success"
+				} ]
+			}, {
+				"children": [],
+				"id": "0wvfyvcw1De70IOiJFW8hNkS6yYteW5L",
+				"nodeType": "wait",
+				"parameters": [ {
+					"name": "time",
+					"value": 60
+				} ]
+			} ],
+			"id": "JpoOCK4DPsHVY8LRlUtIK4bXJx0sEOfc",
+			"nodeType": "sequence",
+			"parameters": []
+		} ],
+		"id": "V1byGDUHaHb2wL6PXyznWiGI1HOHVkwi",
+		"nodeType": "repeat",
+		"parameters": []
+	}
+}

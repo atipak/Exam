@@ -19,7 +19,7 @@ function getInfo()
 end
 
 actualIndex = 1
-local threshold = 50
+local threshold = 100
 launched = false
 lastCheckTime = 0
 timeout = 2
@@ -62,7 +62,6 @@ end
 -- check function
 function isUnitOK(unitID)
   if not Spring.ValidUnitID(unitID) or Spring.GetUnitIsDead(unitID) then
-    transportersStates[unitID] = endedState
     return false
   else
     return true

@@ -1,0 +1,491 @@
+{
+	"additionalNodes": [ {
+		"children": [],
+		"id": "QuGs9bI51vpoJkAceYkGvHIyRtvMdM9c",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "Exam.NeedToBuy(3, {armfark = true})"
+		}, {
+			"name": "repeat",
+			"value": "true"
+		} ]
+	}, {
+		"children": [ {
+			"children": [],
+			"id": "mjA2FKdiiOLTBknRgMTnknO9snk6VpC6",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "unitName",
+				"value": "'armbox'"
+			}, {
+				"name": "scriptName",
+				"value": "Exam.BuySomething"
+			} ],
+			"scriptName": "Exam.BuySomething"
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "PYmMRGw9YEW8F2DwQeIO4HPmsUsyl4XM",
+				"nodeType": "luaCommand",
+				"parameters": [ {
+					"name": "unitName",
+					"value": "'armatlas'"
+				}, {
+					"name": "scriptName",
+					"value": "Exam.BuySomething"
+				} ],
+				"scriptName": "Exam.BuySomething"
+			}, {
+				"children": [ {
+					"children": [],
+					"id": "HyENrwSnzoNeDTuEA2WhsCsgGXQHbatM",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "unitName",
+						"value": "'armspy'"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.BuySomething"
+					} ],
+					"scriptName": "Exam.BuySomething"
+				}, {
+					"children": [ {
+						"children": [],
+						"id": "TJECkDTyOQfss9BkyfRdh5M8Uhi2kDu4",
+						"nodeType": "luaCommand",
+						"parameters": [ {
+							"name": "unitName",
+							"value": "'armzeus'"
+						}, {
+							"name": "scriptName",
+							"value": "Exam.BuySomething"
+						} ],
+						"scriptName": "Exam.BuySomething"
+					}, {
+						"children": [],
+						"id": "wUMSHApd9dmuW7BriBQD3a0ziiSsdwgj",
+						"nodeType": "success",
+						"parameters": []
+					} ],
+					"id": "V57PUKmsQzwscm81e02yJRuIGrg1TXVh",
+					"nodeType": "luaCondition",
+					"parameters": [ {
+						"name": "expression",
+						"value": "Exam.NeedToBuy(8, {armzeus = true})"
+					}, {
+						"name": "repeat",
+						"value": "true"
+					} ]
+				} ],
+				"id": "ymcAc7p8BwkQhp2vqUfVhfkFHgxMuueY",
+				"nodeType": "luaCondition",
+				"parameters": [ {
+					"name": "expression",
+					"value": "Exam.NeedToBuy(3, {armspy = true})"
+				}, {
+					"name": "repeat",
+					"value": "true"
+				} ]
+			} ],
+			"id": "mnSy9CkFjRVjL57s8vketgVtFwaH6rqS",
+			"nodeType": "luaCondition",
+			"parameters": [ {
+				"name": "expression",
+				"value": "Exam.NeedToBuy(3, {armatlas = true})"
+			}, {
+				"name": "repeat",
+				"value": "true"
+			} ]
+		} ],
+		"id": "TvDJh1BWPr9M5K9VNFM1OMAkimQ7xILN",
+		"nodeType": "luaCondition",
+		"parameters": [ {
+			"name": "expression",
+			"value": "Exam.NeedToBuy(3, {armbox = true})"
+		}, {
+			"name": "repeat",
+			"value": "true"
+		} ]
+	} ],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"92OAbpWpkzwZhRO5Ayytwzf5jRUb8oo2": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 1260,
+			"y": 451
+		},
+		"B9hEOlr4W6uFWRLOT69dTgzhabrXiTSa": {
+			"height": 94,
+			"title": "store",
+			"width": 222,
+			"x": 572,
+			"y": -278
+		},
+		"FjOEvqcMlc4fodzHkqCywQWP9fc8UdOZ": {
+			"height": 60,
+			"title": "repeat",
+			"width": 131,
+			"x": 1242,
+			"y": 679
+		},
+		"HyENrwSnzoNeDTuEA2WhsCsgGXQHbatM": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 3548,
+			"y": -270
+		},
+		"P1BWGwbeShNqbCDODOQRpv2m5ZWR2qHE": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 245,
+			"y": -4
+		},
+		"PYmMRGw9YEW8F2DwQeIO4HPmsUsyl4XM": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 3161,
+			"y": -386
+		},
+		"QuGs9bI51vpoJkAceYkGvHIyRtvMdM9c": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 285,
+			"x": 2137,
+			"y": -593
+		},
+		"TJECkDTyOQfss9BkyfRdh5M8Uhi2kDu4": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 3952,
+			"y": -334
+		},
+		"TvDJh1BWPr9M5K9VNFM1OMAkimQ7xILN": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 284,
+			"x": 2451,
+			"y": -505
+		},
+		"UeLwcLGtOiQYaG1wh6tbLCCqCFFItIzu": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 986,
+			"y": 538
+		},
+		"V57PUKmsQzwscm81e02yJRuIGrg1TXVh": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 291,
+			"x": 3493,
+			"y": -169
+		},
+		"cyBtrtZUfSL0tsOTGcDYBAcNBUMj5L2d": {
+			"height": 94,
+			"title": "store",
+			"width": 329,
+			"x": 571,
+			"y": -177
+		},
+		"eoBHpkJp7mcldiUeZjwTQeha601QV7Ho": {
+			"height": 94,
+			"title": "store",
+			"width": 365,
+			"x": 986,
+			"y": 343
+		},
+		"fulCXLALwbBcVo2CL8H7vZfQTUUvjDfu": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 490,
+			"y": 93
+		},
+		"gxnaBe2HtlobINMJVmPiqkrduomdzJ94": {
+			"height": 92,
+			"title": "Exam.UpgradeLine",
+			"width": 187,
+			"x": 2112,
+			"y": 428
+		},
+		"hN8xoiwwHzfxyv4wnW3362TXp8cg9m1J": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 2079,
+			"y": 633
+		},
+		"hNA6GE4VexLS7khRSQpgzVZ878SC9N2A": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 782,
+			"y": 147
+		},
+		"hw39NlL6JoPxMYYBjkwXWt6VuEhEwZSl": {
+			"height": 80,
+			"title": "Fill storage",
+			"width": 157,
+			"x": 1005,
+			"y": 446
+		},
+		"lSNSGF84bSObwsh0k6datFqi4SJM622u": {
+			"height": 151,
+			"title": "First wave",
+			"width": 209,
+			"x": 1034,
+			"y": 178
+		},
+		"mUOQVwynCTuADWuhv3m2mykV4569qHUF": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 575,
+			"x": 1456,
+			"y": 527
+		},
+		"mjA2FKdiiOLTBknRgMTnknO9snk6VpC6": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 2830,
+			"y": -498
+		},
+		"mnSy9CkFjRVjL57s8vketgVtFwaH6rqS": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 291,
+			"x": 2820,
+			"y": -397
+		},
+		"tdRPWYcHwYDNJwkYFTnJPSGN2pVw4HwH": {
+			"height": 151,
+			"title": "reference",
+			"width": 214,
+			"x": 814,
+			"y": -62
+		},
+		"wUMSHApd9dmuW7BriBQD3a0ziiSsdwgj": {
+			"height": 54,
+			"title": "success",
+			"width": 158,
+			"x": 3981,
+			"y": -64
+		},
+		"wskamROeVZHoSnlswjL0PiIFD8gaJlTt": {
+			"height": 151,
+			"title": "CollectMetal",
+			"width": 192,
+			"x": 1451,
+			"y": 369
+		},
+		"y0lHT2j4h2A3dy5pjAD1lSlNpqZGfyh1": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 1047,
+			"y": 94
+		},
+		"ymcAc7p8BwkQhp2vqUfVhfkFHgxMuueY": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 283,
+			"x": 3143,
+			"y": -287
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Common"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "B9hEOlr4W6uFWRLOT69dTgzhabrXiTSa",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "missionInfo"
+			}, {
+				"name": "value",
+				"value": "core.MissionInfo()"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "cyBtrtZUfSL0tsOTGcDYBAcNBUMj5L2d",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "missionInfo"
+			}, {
+				"name": "value",
+				"value": "Exam.ChangeMissionInfo(missionInfo)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [],
+				"id": "tdRPWYcHwYDNJwkYFTnJPSGN2pVw4HwH",
+				"nodeType": "reference",
+				"parameters": [ {
+					"name": "behaviourName",
+					"value": "Exam.ArtillerySupport"
+				} ],
+				"referenceInputs": [ {
+					"name": "pathId",
+					"value": "2"
+				}, {
+					"name": "missionInfo",
+					"value": "missionInfo"
+				} ],
+				"referenceOutputs": []
+			}, {
+				"children": [ {
+					"children": [],
+					"id": "y0lHT2j4h2A3dy5pjAD1lSlNpqZGfyh1",
+					"nodeType": "wait",
+					"parameters": [ {
+						"name": "time",
+						"value": 10
+					} ]
+				}, {
+					"children": [],
+					"id": "lSNSGF84bSObwsh0k6datFqi4SJM622u",
+					"nodeType": "reference",
+					"parameters": [ {
+						"name": "behaviourName",
+						"value": "Exam.ZeusDisaster"
+					} ],
+					"referenceInputs": [ {
+						"name": "waitTime",
+						"value": "780"
+					}, {
+						"name": "missionInfo",
+						"value": "missionInfo"
+					} ],
+					"referenceOutputs": []
+				}, {
+					"children": [],
+					"id": "eoBHpkJp7mcldiUeZjwTQeha601QV7Ho",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "var",
+						"value": "path"
+					}, {
+						"name": "value",
+						"value": "Exam.GetPath(2, missionInfo)"
+					}, {
+						"name": "scriptName",
+						"value": "store"
+					} ],
+					"scriptName": "store"
+				}, {
+					"children": [],
+					"id": "hw39NlL6JoPxMYYBjkwXWt6VuEhEwZSl",
+					"nodeType": "wait",
+					"parameters": [ {
+						"name": "time",
+						"value": 30
+					} ]
+				}, {
+					"children": [ {
+						"children": [ {
+							"children": [],
+							"id": "wskamROeVZHoSnlswjL0PiIFD8gaJlTt",
+							"nodeType": "reference",
+							"parameters": [ {
+								"name": "behaviourName",
+								"value": "Exam.FarKing"
+							} ],
+							"referenceInputs": [ {
+								"name": "waitTime",
+								"value": "90"
+							}, {
+								"name": "path",
+								"value": "path"
+							} ],
+							"referenceOutputs": []
+						} ],
+						"id": "92OAbpWpkzwZhRO5Ayytwzf5jRUb8oo2",
+						"nodeType": "repeat",
+						"parameters": []
+					}, {
+						"children": [ {
+							"children": [ {
+								"children": [],
+								"id": "gxnaBe2HtlobINMJVmPiqkrduomdzJ94",
+								"nodeType": "luaCommand",
+								"parameters": [ {
+									"name": "lineName",
+									"value": "GoodMiddle"
+								}, {
+									"name": "upgradeLevel",
+									"value": "4"
+								}, {
+									"name": "scriptName",
+									"value": "Exam.UpgradeLine"
+								} ],
+								"scriptName": "Exam.UpgradeLine"
+							}, {
+								"children": [],
+								"id": "hN8xoiwwHzfxyv4wnW3362TXp8cg9m1J",
+								"nodeType": "success",
+								"parameters": []
+							} ],
+							"id": "mUOQVwynCTuADWuhv3m2mykV4569qHUF",
+							"nodeType": "luaCondition",
+							"parameters": [ {
+								"name": "expression",
+								"value": "Exam.IsEnoughMetal(800)"
+							}, {
+								"name": "repeat",
+								"value": "true"
+							} ]
+						} ],
+						"id": "FjOEvqcMlc4fodzHkqCywQWP9fc8UdOZ",
+						"nodeType": "repeat",
+						"parameters": []
+					} ],
+					"id": "UeLwcLGtOiQYaG1wh6tbLCCqCFFItIzu",
+					"nodeType": "parallel",
+					"parameters": [ {
+						"name": "mode",
+						"value": "all-success"
+					} ]
+				} ],
+				"id": "hNA6GE4VexLS7khRSQpgzVZ878SC9N2A",
+				"nodeType": "sequence",
+				"parameters": []
+			} ],
+			"id": "fulCXLALwbBcVo2CL8H7vZfQTUUvjDfu",
+			"nodeType": "parallel",
+			"parameters": [ {
+				"name": "mode",
+				"value": "all-success"
+			} ]
+		} ],
+		"id": "P1BWGwbeShNqbCDODOQRpv2m5ZWR2qHE",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

@@ -1,0 +1,96 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 88,
+			"width": 180
+		}
+	},
+	"inputs": [],
+	"outputs": [],
+	"properties": {
+		"dcIsWblN8KeS8Sr6eegSSf1oGP6pTg4h": {
+			"height": 94,
+			"title": "store",
+			"width": 482,
+			"x": 548,
+			"y": -96
+		},
+		"kIRAT1tetjiz7ZBYNr0VOfQiTsFZEWhV": {
+			"height": 94,
+			"title": "store",
+			"width": 482,
+			"x": 503,
+			"y": 14
+		},
+		"uKR4x04UyQmB8D6HHsZb3Xzx4allnIsm": {
+			"height": 70,
+			"title": "parallel",
+			"width": 202,
+			"x": 235,
+			"y": 18
+		},
+		"y8lcQQJApMM1tbhxYVmmcs03eTqSmHy5": {
+			"height": 74,
+			"title": "echo",
+			"width": 380,
+			"x": 581,
+			"y": 161
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "dcIsWblN8KeS8Sr6eegSSf1oGP6pTg4h",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "x"
+			}, {
+				"name": "value",
+				"value": "Sensors.Exam.ChangeMissionInfo(Sensors.core.MissionInfo())"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "kIRAT1tetjiz7ZBYNr0VOfQiTsFZEWhV",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "y"
+			}, {
+				"name": "value",
+				"value": "Sensors.core.MissionInfo()"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "y8lcQQJApMM1tbhxYVmmcs03eTqSmHy5",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "msg",
+				"value": "Exam.Test(0)"
+			}, {
+				"name": "scriptName",
+				"value": "echo"
+			} ],
+			"scriptName": "echo"
+		} ],
+		"id": "uKR4x04UyQmB8D6HHsZb3Xzx4allnIsm",
+		"nodeType": "parallel",
+		"parameters": [ {
+			"name": "mode",
+			"value": "all-success"
+		} ]
+	}
+}

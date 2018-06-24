@@ -1,0 +1,223 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 190,
+			"width": 219
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "path"
+	}, {
+		"command": "Variable",
+		"name": "atlas"
+	}, {
+		"command": "Variable",
+		"name": "luger"
+	} ],
+	"outputs": [ {
+		"name": "nearestEnemy"
+	} ],
+	"properties": {
+		"2lX8mquAIuUlJJZFf54ihkNqCDswSqPo": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 325,
+			"y": 39
+		},
+		"CjsgICYHCDqsZJuVUgmV7PpngZ2psc0Y": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 1135,
+			"y": 490
+		},
+		"Jd7uyqhxM5sWK2lmwYwuZ1NW7u9DL54G": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 1136,
+			"y": 308
+		},
+		"PxmrFZmk7uvOYijt9Qrc2pBTtutl4J8y": {
+			"height": 94,
+			"title": "store",
+			"width": 680,
+			"x": 1111,
+			"y": 95
+		},
+		"RTelzO3uY43JHPRtiOSRvHxYMFAbkq74": {
+			"height": 92,
+			"title": "Exam.UnloadUnit",
+			"width": 176,
+			"x": 1136,
+			"y": 565
+		},
+		"Y9JN0TZXrYqA9NOyBiZdtDrpYJffiFDV": {
+			"height": 92,
+			"title": "Exam.Load",
+			"width": 176,
+			"x": 1139,
+			"y": 202
+		},
+		"hTmiem4CMQrNwGnB3BPzgiRtxJ6liI1A": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 848,
+			"y": 249
+		},
+		"iWUteNAdwIZwrXPRyhPfFhFE5GFdJbWO": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 905,
+			"y": 126
+		},
+		"okcjVcCeuV6rjX8a89tIKHiNS8qgnnas": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 194,
+			"x": 587,
+			"y": 151
+		},
+		"tqtMrjLwlRg3vUi8CEYY4O3IFnJ4IMnv": {
+			"height": 92,
+			"title": "Exam.SendOne",
+			"width": 184,
+			"x": 1131,
+			"y": 393
+		},
+		"vSr0bxDFpLcmk4n3VZjOntgOuxpofNSZ": {
+			"height": 94,
+			"title": "store",
+			"width": 484,
+			"x": 568,
+			"y": -75
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "vSr0bxDFpLcmk4n3VZjOntgOuxpofNSZ",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "nearestEnemy"
+			}, {
+				"name": "value",
+				"value": "{pos = path[Exam.NearestEnemyStrongpoint(path)].position}"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [ {
+					"children": [],
+					"id": "PxmrFZmk7uvOYijt9Qrc2pBTtutl4J8y",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "var",
+						"value": "safePosition"
+					}, {
+						"name": "value",
+						"value": "Exam.FindPlaceForLuger2(luger,nearestEnemy.pos)"
+					}, {
+						"name": "scriptName",
+						"value": "store"
+					} ],
+					"scriptName": "store"
+				}, {
+					"children": [],
+					"id": "Y9JN0TZXrYqA9NOyBiZdtDrpYJffiFDV",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "unitToRescue",
+						"value": "luger"
+					}, {
+						"name": "unitId",
+						"value": "atlas"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.Load"
+					} ],
+					"scriptName": "Exam.Load"
+				}, {
+					"children": [],
+					"id": "Jd7uyqhxM5sWK2lmwYwuZ1NW7u9DL54G",
+					"nodeType": "wait",
+					"parameters": [ {
+						"name": "time",
+						"value": 2
+					} ]
+				}, {
+					"children": [],
+					"id": "tqtMrjLwlRg3vUi8CEYY4O3IFnJ4IMnv",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "goal",
+						"value": "safePosition"
+					}, {
+						"name": "id",
+						"value": "atlas"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.SendOne"
+					} ],
+					"scriptName": "Exam.SendOne"
+				}, {
+					"children": [],
+					"id": "CjsgICYHCDqsZJuVUgmV7PpngZ2psc0Y",
+					"nodeType": "wait",
+					"parameters": [ {
+						"name": "time",
+						"value": 2
+					} ]
+				}, {
+					"children": [],
+					"id": "RTelzO3uY43JHPRtiOSRvHxYMFAbkq74",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "unitToRescue",
+						"value": "luger"
+					}, {
+						"name": "unitId",
+						"value": "atlas"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.UnloadUnit"
+					} ],
+					"scriptName": "Exam.UnloadUnit"
+				} ],
+				"id": "iWUteNAdwIZwrXPRyhPfFhFE5GFdJbWO",
+				"nodeType": "sequence",
+				"parameters": []
+			}, {
+				"children": [],
+				"id": "hTmiem4CMQrNwGnB3BPzgiRtxJ6liI1A",
+				"nodeType": "success",
+				"parameters": []
+			} ],
+			"id": "okcjVcCeuV6rjX8a89tIKHiNS8qgnnas",
+			"nodeType": "luaCondition",
+			"parameters": [ {
+				"name": "expression",
+				"value": "nearestEnemy ~= nil"
+			}, {
+				"name": "repeat",
+				"value": "false"
+			} ]
+		} ],
+		"id": "2lX8mquAIuUlJJZFf54ihkNqCDswSqPo",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}

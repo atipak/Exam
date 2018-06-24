@@ -1,6 +1,6 @@
 local sensorInfo = {
-	name = "CreatesTriplets",
-	desc = "Add to given array with already stored keys a new key with begin positions",
+	name = "GetPath",
+	desc = "Returns path with given id from missionInfo",
 	author = "Patik",
 	date = "2018-05-11",
 	license = "notAlicense",
@@ -19,5 +19,5 @@ end
 
 -- @description 
 return function(pathId, missionInfo)
-  return missionInfo.coridors[pathId]
+  return missionInfo.corridors[pathId]
 end

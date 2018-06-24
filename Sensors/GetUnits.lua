@@ -1,12 +1,12 @@
 local sensorInfo = {
-	name = "UnitsToRescue",
-	desc = "Returns ids of units to rescue. It can return {}",
+	name = "GetUnits",
+	desc = "Returns ids of units by given type. It can return {}",
 	author = "Patik",
 	date = "2018-05-11",
 	license = "notAlicense",
 }
 
-local EVAL_PERIOD_DEFAULT = 0 -- acutal, no caching
+local EVAL_PERIOD_DEFAULT = -1 -- acutal, no caching
 
 function getInfo()
 	return {
@@ -17,9 +17,10 @@ end
 
 -- @description 
 return function(unitsNames)
+  -- unitsNames = {unitNameType = true, ...}
   local allMyUnits = Spring.GetTeamUnits(Spring.GetLocalTeamID())
   -- there are no units
-  if #units == 0 then 
+  if #allMyUnits == 0 then 
     return {}
   end
   local unitsToRescue = {}

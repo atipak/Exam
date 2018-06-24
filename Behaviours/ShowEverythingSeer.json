@@ -1,0 +1,222 @@
+{
+	"additionalNodes": [],
+	"additionalParameters": {
+		"root": {
+			"height": 128,
+			"width": 224
+		}
+	},
+	"inputs": [ {
+		"command": "Variable",
+		"name": "pathId"
+	}, {
+		"command": "Variable",
+		"name": "path"
+	} ],
+	"outputs": [],
+	"properties": {
+		"08T41QpJEbxvnoXjRXq6bYUjtwxjWukf": {
+			"height": 72,
+			"title": "Exam.BuySomething",
+			"width": 193,
+			"x": 1054,
+			"y": -356
+		},
+		"A98TAP0EM2jRZ5odCWmJTyJ9d7rW3oce": {
+			"height": 94,
+			"title": "store",
+			"width": 307,
+			"x": 488,
+			"y": 101
+		},
+		"NN6AeE1dufuaAALa04jlyRQyRAaLPUMt": {
+			"height": 94,
+			"title": "store",
+			"width": 319,
+			"x": 497,
+			"y": -46
+		},
+		"QfR66A9p8TfHVwqnVwbHBk5T6xzf2ef1": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 287,
+			"y": 15
+		},
+		"S1YBFMoDhZnGwMcAvGaKhdoHmPIDj4zJ": {
+			"height": 60,
+			"title": "sequence",
+			"width": 143,
+			"x": 760,
+			"y": -335
+		},
+		"TALRVDAEvZpY3dIedpAI6Ky3Gg17DEoH": {
+			"height": 54,
+			"title": "success",
+			"width": 132,
+			"x": 928,
+			"y": -159
+		},
+		"Uc7Fs8zrZiWDZXxiVy24rNcrY6EqMC39": {
+			"height": 94,
+			"title": "store",
+			"width": 319,
+			"x": 1052,
+			"y": -277
+		},
+		"WEgurGglFDOP6Kxc7mL72KltIB0aowqj": {
+			"height": 92,
+			"title": "Exam.SendOne",
+			"width": 429,
+			"x": 492,
+			"y": 209
+		},
+		"YvqK61NUCSMo2FrBGbJvNGt9elpfzDWr": {
+			"height": 94,
+			"title": "store",
+			"width": 319,
+			"x": 507,
+			"y": -474
+		},
+		"kGAyle9PnVtuoFRNcv1vAx5HnDOklVVu": {
+			"height": 90,
+			"title": "luaCondition",
+			"width": 194,
+			"x": 513,
+			"y": -221
+		},
+		"wRu9OBeWuJ60YuKSqlaxyS4rV0pMW50b": {
+			"height": 72,
+			"title": "wait",
+			"width": 131,
+			"x": 491,
+			"y": 309
+		}
+	},
+	"roles": [ {
+		"categories": [],
+		"name": "Role 0"
+	} ],
+	"root": {
+		"children": [ {
+			"children": [],
+			"id": "YvqK61NUCSMo2FrBGbJvNGt9elpfzDWr",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "seers"
+			}, {
+				"name": "value",
+				"value": "Exam.GetUnits({armseer = true})"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [ {
+				"children": [ {
+					"children": [],
+					"id": "08T41QpJEbxvnoXjRXq6bYUjtwxjWukf",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "unitName",
+						"value": "'armseer'"
+					}, {
+						"name": "scriptName",
+						"value": "Exam.BuySomething"
+					} ],
+					"scriptName": "Exam.BuySomething"
+				}, {
+					"children": [],
+					"id": "Uc7Fs8zrZiWDZXxiVy24rNcrY6EqMC39",
+					"nodeType": "luaCommand",
+					"parameters": [ {
+						"name": "var",
+						"value": "seers"
+					}, {
+						"name": "value",
+						"value": "Exam.GetUnits({armseer = true})"
+					}, {
+						"name": "scriptName",
+						"value": "store"
+					} ],
+					"scriptName": "store"
+				} ],
+				"id": "S1YBFMoDhZnGwMcAvGaKhdoHmPIDj4zJ",
+				"nodeType": "sequence",
+				"parameters": []
+			}, {
+				"children": [],
+				"id": "TALRVDAEvZpY3dIedpAI6Ky3Gg17DEoH",
+				"nodeType": "success",
+				"parameters": []
+			} ],
+			"id": "kGAyle9PnVtuoFRNcv1vAx5HnDOklVVu",
+			"nodeType": "luaCondition",
+			"parameters": [ {
+				"name": "expression",
+				"value": "#seers == 0"
+			}, {
+				"name": "repeat",
+				"value": "true"
+			} ]
+		}, {
+			"children": [],
+			"id": "NN6AeE1dufuaAALa04jlyRQyRAaLPUMt",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "seer"
+			}, {
+				"name": "value",
+				"value": "seers[1]"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "A98TAP0EM2jRZ5odCWmJTyJ9d7rW3oce",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "var",
+				"value": "farthestStrongpoint"
+			}, {
+				"name": "value",
+				"value": "Exam.FarthestMyStrongpoint(path)"
+			}, {
+				"name": "scriptName",
+				"value": "store"
+			} ],
+			"scriptName": "store"
+		}, {
+			"children": [],
+			"id": "WEgurGglFDOP6Kxc7mL72KltIB0aowqj",
+			"nodeType": "luaCommand",
+			"parameters": [ {
+				"name": "goal",
+				"value": "Exam.RndPlaceStrpt(path[farthestStrongpoint].position)"
+			}, {
+				"name": "id",
+				"value": "seer"
+			}, {
+				"name": "scriptName",
+				"value": "Exam.SendOne"
+			} ],
+			"scriptName": "Exam.SendOne"
+		}, {
+			"children": [],
+			"id": "wRu9OBeWuJ60YuKSqlaxyS4rV0pMW50b",
+			"nodeType": "wait",
+			"parameters": [ {
+				"name": "time",
+				"value": 10
+			} ]
+		} ],
+		"id": "QfR66A9p8TfHVwqnVwbHBk5T6xzf2ef1",
+		"nodeType": "sequence",
+		"parameters": []
+	}
+}
